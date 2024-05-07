@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/logo-cruz-roja.png"/>
+    <!-- Nueva dirección de archivo de CSS en el árbol jerárquico -->
+    <link rel="stylesheet" href="bootstrap.css">
+    <!-- Link de Google Fonts para obtención de íconos -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
+    <!-- Nueva dirección de archivo de JavaScript en el árbol jerárquico -->
+    <script src="chatbot.js" defer></script>
+    <title>Inicio</title>
+</head>
+<body>
+  <!-- Elemento de encabezado -->
+  <header id="header">
+      <h1 class="p-2 bg-principal text-center">
+        <img src="images/cruz-roja-encabezado.png" width="4%" height="4%" alt="imagen de ícono"> 
+        Cruz Roja Mexicana
+      </h1>
+  </header>
+
+  <!-- Elemento de sectos de contenido principal de la página -->
+  <section id="main-content">
+      
+      <!-- Encabezado de imágen dentro de pantalla principal -->
+      <div class="card mb-4" id="titulo-principal">
+          <img src="images/cruz-roja-mexicana-delegacion-toluca.jpg" class="card-img" width="100%"/>
+          
+          <div class="d-none d-sm-block">
+              <div class="card-img-overlay d-flex justify-content-center align-items-center">
+                  <div class="btn-cintillo-primario text-center rounded">
+                      <h2 class="card-title">Todos somos hermanos</h2>
+                      <p class="card-text">En caso de una emergencia, siempre haya cerca personas capacitadas, prontas a utilizar las habilidades adquiridas en la Cruz Roja para salvar vidas</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <!-- En este apartado se desarrollara un catálogo simple de artículos de primeros auxilios como compendio de material existente en la Cruz Roja -->
+      <div class="container col-lg-9 col-sm-12">
+          <div class="row row row-cols-1 row-cols-md-3 g-4g-4">
+              <div class="col-sm-6">
+                <div class="card">
+                  <div class="card-body">
+                      <img src="images/articulos/tratamiento-quemaduras.webp" class="card-img-top" alt="...">
+                      <h5 class="card-title">Primeros auxilios para Quemaduras</h5>
+                      <p class="card-text">Que hacer en caso de sufrir una quemadura, pon atención a las distintas señales y no olvides consultar a un especialista médico para una correcta evaluación.</p>
+                      <a href="https://cruzroja.org.ar/blog/que-hacer-ante-una-quemadura/" class="btn btn-primario" target="_blank">Más información</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="card">
+                  <div class="card-body">
+                      <img src="images/articulos/tratamiento-hemorragias.png" class="card-img-top" alt="...">
+                      <h5 class="card-title">Primeros Auxilios para Hemorragias</h5>
+                      <p class="card-text">Ubica el lugar de daño y determina el riesgo de la herida, algunas no necesitan de atención médica profesional. Aprende a identificarlas</p>
+                      <a href="https://www.cruzroja.es/prevencion/hogar_06.html" class="btn btn-primario" target="_blank">Más información</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                  <div class="card">
+                    <div class="card-body">
+                      <img src="images/articulos/tratamiento-intoxicaciones.jpg" class="card-img-top" alt="...">
+                      <h5 class="card-title">Intoxicaciones</h5>
+                      <p class="card-text">La mejor manera de evitar este tipo de accidentes es la prevención, manten objetos peligrosos fuera del alcance de menores y revisa instalaciones del hogar.</p>
+                      <a href="https://www.cruzroja.es/prevencion/hogar_07.html" class="btn btn-primario" target="_blank">Más información</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="card">
+                    <div class="card-body">
+                      <img src="images/articulos/maniobra-de-heimlich.webp" class="card-img-top" alt="...">
+                      <h5 class="card-title">Maniobra de Heimlich</h5>
+                      <p class="card-text">Los accidente por asfixia son más comúnes de lo que parecen, no golpees la espalda de alguien, presiona su debajo de sus costillas con tu puño.</p>
+                      <a href="https://www.cruzroja.es/prevencion/hogar_03.html" class="btn btn-primario"target="_blank">Más información</a>
+                    </div>
+                  </div>
+                </div>
+          </div>
+      </div>
+     
+  </section>
+
+   <!-- Desarrollo del Chatbot -->
+   
+   <div class="chatbot">
+    <header>
+      <h2>Asistente de emergencias</h2>
+      <span class="cerrar-btn material-symbols-outlined">close</span>
+    </header>
+    <ul class="chatbox">
+      <li class="chat incoming">
+        <span class="material-symbols-outlined">local_hospital</span>
+        <p>Servicios de Emergencias de 911. ¿Cuál es su emergencia? <b>*por motivos de políticas de seguridad y privacidad, se tomará su localización actual de acuerdo a sus permisos de usuario*</b></p>
+      </li>
+      <!-- <li class="chat outgoing">
+        <p>Lorem ipsum dolor sit amet consectetur.</p>
+      </li> -->
+    </ul>
+    <div class="chat-input">
+      <textarea placeholder="Escribe tu mensaje" required></textarea>
+      <span id="sent-btn" class="material-symbols-outlined">send</span>
+    </div>
+  </div>
+  <!-- Desarrollo del Chatbot -->
+  <!-- Elemento de pie de página -->
+  <footer id="footer">
+      <h5 class="p-3 bg-footer text-center">
+        <i>Copyright perteneciente a cruzrojamexicana.org.mx</i>
+        <br>@2024
+      </h5>
+
+      <button class="chatbot-toggler" onclick="getLocation()">
+        <span class="material-symbols-outlined">mode_comment</span>
+        <span class="material-symbols-outlined">close</span>
+       </button>
+  </footer>
+</body>
+</html>
